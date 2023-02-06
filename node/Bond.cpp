@@ -533,12 +533,12 @@ void Bond::receivedQoS(const SharedPtr<Path>& path, int64_t now, int count, uint
 
 void Bond::receivedAck(int pathIdx, int64_t now, int32_t ackedBytes)
 {
-	/*
+	
 	Mutex::Lock _l(_paths_m);
 	debug("received ACK of %d bytes on path %s, there are still %d un-acked bytes", ackedBytes, pathToStr(_paths[pathIdx].p).c_str(), _paths[pathIdx].unackedBytes);
 	_paths[pathIdx].lastAckReceived = now;
 	_paths[pathIdx].unackedBytes = (ackedBytes > _paths[pathIdx].unackedBytes) ? 0 : _paths[pathIdx].unackedBytes - ackedBytes;
-	*/
+	
 }
 
 int32_t Bond::generateQoSPacket(int pathIdx, int64_t now, char* qosBuffer)
