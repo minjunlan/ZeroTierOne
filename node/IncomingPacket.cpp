@@ -259,7 +259,7 @@ bool IncomingPacket::_doERROR(const RuntimeEnvironment *RR,void *tPtr,const Shar
 
 bool IncomingPacket::_doACK(const RuntimeEnvironment* RR, void* tPtr, const SharedPtr<Peer>& peer)
 {
-	/*
+	
 	SharedPtr<Bond> bond = peer->bond();
 	if (! bond || ! bond->rateGateACK(RR->node->now())) {
 		return true;
@@ -272,7 +272,7 @@ bool IncomingPacket::_doACK(const RuntimeEnvironment* RR, void* tPtr, const Shar
 	if (bond) {
 		bond->receivedAck(_path, RR->node->now(), Utils::ntoh(ackedBytes));
 	}
-	*/
+	
 	return true;
 }
 
