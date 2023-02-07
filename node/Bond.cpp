@@ -900,11 +900,11 @@ void Bond::processBackgroundBondTasks(void* tPtr, int64_t now)
 					sendQOS_MEASUREMENT(tPtr, i, _paths[i].p->localSocket(), _paths[i].p->address(), now);
 				}
 				// ACK
-				/*
+				
 				if (_paths[i].needsToSendAck(now, _ackSendInterval)) {
 					sendACK(tPtr, i, _paths[i].p->localSocket(), _paths[i].p->address(), now);
 				}
-				*/
+				
 			}
 		}
 	}
